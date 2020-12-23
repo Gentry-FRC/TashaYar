@@ -34,10 +34,16 @@ public class  DriveCommand extends Command {
     protected void initialize() {
           
     }
-
-    // Called repeatedly when this Command is scheduled to run
+    
+    //Us this execute for the joysticks
+    //protected void execute() {
+    // Robot.driveTran.drive(Robot.oi.joystick1, Robot.oi.joystick2);
+    //}
+    
+    
+    //Use this execute for the xbox contorller
     protected void execute() {
-        Robot.driveTrain.drive(Robot.oi.joystick1, Robot.oi.joystick2);
+        Robot.driveTrain.drive(Robot.oi.joystick1,1, Robot.oi.joystick1,4);
               
     }
 
