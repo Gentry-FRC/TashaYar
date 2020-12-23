@@ -11,16 +11,15 @@
 
 package org.usfirst.frc4843.Robot.commands;
 
-import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.command.Command;
 import org.usfirst.frc4843.Robot.Robot;
 
 /**
  *
  */
-public class  ShootCommand extends Command {
+public class  LightsOffCommand extends Command {
 
-    public ShootCommand() {
+    public LightsOffCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
 	
@@ -29,24 +28,26 @@ public class  ShootCommand extends Command {
     }
 
     // Called just before this Command runs the first time
-    protected void initialize() {
+    protected void initialize(){
+        
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        //double throttle = ((Robot.oi.joystick1.getZ()*-1)+1)/2;
-        double throttle = (Robot.oi.joystick1.getRawAxis(3));
-        System.out.println( throttle );
-        Robot.shoot.shoot(throttle);
+        Robot.lights.off();
+        
+      
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        
+       return true;
     }
 
     // Called once after isFinished returns true
     protected void end() {
+      
     }
 
     // Called when another command which requires one or more of the same

@@ -12,7 +12,7 @@ public class MagExtension extends Subsystem {
 
      public void Extend(){
          
-       MagExtension.setAngle(115);
+       MagExtension.setAngle(90);
      }
      
      public void Retract(){

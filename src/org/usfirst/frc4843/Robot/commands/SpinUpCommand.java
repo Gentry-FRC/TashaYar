@@ -33,7 +33,15 @@ public class  SpinUpCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        Robot.shoot.shoot(.80);
+        double throttle = (Robot.oi.joystick1.getRawAxis(3));
+        if (throttle < 0){
+            throttle = 0;
+        }
+    
+        
+        System.out.println( throttle );
+        Robot.shoot.shoot(throttle);
+       // Robot.shoot.shoot(.80);
     }
 
     // Make this return true when this Command no longer needs to run execute()

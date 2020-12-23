@@ -36,7 +36,7 @@ public class DriveTrain extends Subsystem {
     
        //use this drive for xbox controller
     public void drive (GenericHID leftStick ,int leftAxis, GenericHID rightStick, int rightAxis){
-        drive.tankDrive(leftStick, 1, leftStick, 4);
+        drive.tankDrive(leftStick, 2, leftStick, 5);
     }
     
     //Us this drive for joysticks
