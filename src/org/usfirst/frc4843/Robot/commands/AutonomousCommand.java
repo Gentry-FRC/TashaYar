@@ -34,6 +34,7 @@ public class  AutonomousCommand extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+        
         Robot.shoot.shoot(.80);     //Spin up the shooter wheel to %80
         Timer.delay(3);             //Wait 3 seconds for the wheel to spin up
         Robot.fire.Fire();          //Shoot a disc
@@ -55,7 +56,9 @@ public class  AutonomousCommand extends Command {
         Robot.fire.Fire();          //Shoot a disc
         Timer.delay(1);             //Wait for the disc to shoot
         Robot.fire.FireReset();     //Reset the fire arm
-        Timer.delay(1);             //Wair for the arm to reset
+        Timer.delay(1);             //Wait for the arm to reset
+        
+        
         
         
         
